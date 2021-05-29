@@ -25,4 +25,37 @@
                 app:menu="@menu/top_main_actionbar"
                 android:hapticFeedbackEnabled="false"/>
     </com.google.android.material.appbar.AppBarLayout>
+
+    <com.otaliastudios.zoom.ZoomLayout
+            android:id="@+id/zoom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="horizontal|vertical"
+            app:hasClickableChildren="true"
+            app:horizontalPanEnabled="true"
+            app:verticalPanEnabled="true"
+            app:zoomEnabled="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        <ru.mail.fancywork.ui.view.ColorGridView
+                android:id="@+id/color_grid_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+    </com.otaliastudios.zoom.ZoomLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="testButton"
+            app:srcCompat="@android:drawable/ic_input_add"
+            android:id="@+id/floatingActionButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:focusable="true" />
 </androidx.constraintlayout.widget.ConstraintLayout>
